@@ -17,10 +17,12 @@ class Pokidex extends Component {
   };
 
   render() {
-    const { pokemon } = this.props;
+    const { exp, isWinner, pokemon } = this.props;
     return (
       <div className="Pokidex">
         <h1>Pokidex!</h1>
+        <h2>Total Experience: {exp}</h2>
+        <h2>{isWinner ? "Winner" : "Loser"}</h2>
         <div className="Pokidex-cards">
           {pokemon.map(poke => (
             <Pokicard
