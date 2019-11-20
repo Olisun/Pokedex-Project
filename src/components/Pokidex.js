@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Pokicard from './Pokicard';
+import './Pokidex.css'
 
 class Pokidex extends Component {
   static defaultProps = {
@@ -20,9 +21,9 @@ class Pokidex extends Component {
     return (
       <div className="Pokidex">
         <h1>Pokidex!</h1>
-        <div>
+        <div className="Pokidex-cards">
           {pokemon.map(poke => (
-            <Pokicard 
+            <Pokicard
               id={poke.id}
               name={poke.name}
               type={poke.type}
